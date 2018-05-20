@@ -12,6 +12,8 @@
       background-color: blue;
       padding: 35px;
       border-radius: 50%; }
+      .container .buttons #b1.hover {
+        background-color: #000099; }
       .container .buttons #b1:hover {
         background-color: #0000cc; }
     .container .buttons #b2 {
@@ -19,6 +21,8 @@
       background-color: green;
       padding: 35px;
       border-radius: 50%; }
+      .container .buttons #b2.hover {
+        background-color: #001a00; }
       .container .buttons #b2:hover {
         background-color: #004d00; }
     .container .buttons #b3 {
@@ -26,6 +30,8 @@
       background-color: red;
       padding: 35px;
       border-radius: 50%; }
+      .container .buttons #b3.hover {
+        background-color: #990000; }
       .container .buttons #b3:hover {
         background-color: #cc0000; }
     .container .buttons #b4 {
@@ -33,5 +39,7 @@
       background-color: yellow;
       padding: 35px;
       border-radius: 50%; }
+      .container .buttons #b4.hover {
+        background-color: #999900; }
       .container .buttons #b4:hover {
         background-color: #cccc00; }
