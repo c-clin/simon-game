@@ -1,0 +1,37 @@
+.container {
+  position: absolute;
+  margin: 0 auto;
+  text-align: center;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%); }
+  .container .buttons {
+    margin-top: 50px; }
+    .container .buttons #b1 {
+      cursor: pointer;
+      background-color: blue;
+      padding: 35px;
+      border-radius: 50%; }
+      .container .buttons #b1:hover {
+        background-color: #0000cc; }
+    .container .buttons #b2 {
+      cursor: pointer;
+      background-color: green;
+      padding: 35px;
+      border-radius: 50%; }
+      .container .buttons #b2:hover {
+        background-color: #004d00; }
+    .container .buttons #b3 {
+      cursor: pointer;
+      background-color: red;
+      padding: 35px;
+      border-radius: 50%; }
+      .container .buttons #b3:hover {
+        background-color: #cc0000; }
+    .container .buttons #b4 {
+      cursor: pointer;
+      background-color: yellow;
+      padding: 35px;
+      border-radius: 50%; }
+      .container .buttons #b4:hover {
+        background-color: #cccc00; }
