@@ -25,7 +25,11 @@ $(document).ready(function() {
     // count the number of moves
     function addCount() {
         game.count++;
-        $('#count').text(game.count);
+        $("#count").text(game.count);
+        $("#count").addClass('animated bounce');
+        setTimeout(() => {
+            $('#count').removeClass('animated bounce');
+        }, 800);
         newMove();
     }
 
@@ -86,7 +90,10 @@ $(document).ready(function() {
                 setTimeout(() => {
                     $('.button').removeClass('animated swing');
                 }, 1200);
-                startGame();
+                $('#reset-btn').css('display', 'inline-block').addClass('animated tada');
+                setTimeout(() => {
+                    $('#reset-btn').removeClass('animated tada');
+                }, 1000);
             } else {
                 $(`#${id}`).addClass("animated shake");
                 console.log('wrong, try again');
@@ -137,12 +144,25 @@ $(document).ready(function() {
     $('#start-btn').click(() => {
         console.log('start game');
         startGame();
+        $('#reset-btn').addClass('animated fadeOut');
+        setTimeout(() => {
+            $('#reset-btn').removeClass('animated fadeOut').css('display', 'none');
+        }, 1000);
     })
 
+    // listens to strict button click
     $('#strict-btn').click(() => {
         game.strict = !game.strict;
         $("#strict-btn").toggleClass("on-strict");
         console.log('strict mode: ' + game.strict);
+    })
+
+    // listens to play again button click
+    $('#reset-btn').click(() => {
+        $('#reset-btn').addClass('animated fadeOut');
+        setTimeout(() => {
+            $('#reset-btn').removeClass('animated fadeOut').css('display', 'none');
+        }, 1000);
     })
 
 

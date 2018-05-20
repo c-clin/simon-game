@@ -1,14 +1,16 @@
 html, body {
-  background-color: #3b4274; }
+  background-color: #3b4274;
+  box-sizing: border-box; }
 
 .container {
   position: absolute;
   margin: 0 auto;
   text-align: center;
-  top: 40%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%); }
   .container .header {
+    position: relative;
     font-size: 28px;
     color: white; }
     .container .header #start-btn {
@@ -18,7 +20,10 @@ html, body {
       background-color: transparent;
       border: none;
       color: #e3c1a4;
-      transition: .4s ease-in-out; }
+      transition: .4s ease-in-out;
+      margin: 0 10px; }
+      .container .header #start-btn:hover {
+        color: #ffdb00; }
       .container .header #start-btn:focus {
         outline: none; }
     .container .header #strict-btn {
@@ -35,6 +40,21 @@ html, body {
         transition: .4s ease-in-out; }
       .container .header #strict-btn:focus {
         outline: none; }
+    .container .header #reset-btn {
+      display: none;
+      position: relative;
+      left: 40px;
+      cursor: pointer;
+      padding-left: 0;
+      font-size: 22px;
+      background-color: transparent;
+      border: none;
+      color: #e3c1a4;
+      transition: .4s ease-in-out; }
+      .container .header #reset-btn:hover {
+        color: greenyellow; }
+      .container .header #reset-btn:focus {
+        outline: none; }
   .container .buttons {
     margin-top: 50px; }
     .container .buttons #b1 {
@@ -42,12 +62,10 @@ html, body {
       background-color: blue;
       padding: 40px;
       border-radius: 50%;
-      border: 3px solid #5e5c5c;
-      margin: 0 25px; }
+      border: 3px solid #2c2c2d;
+      margin: 25px 25px; }
       .container .buttons #b1.hover {
         background-color: #000099; }
-      .container .buttons #b1:hover {
-        background-color: #0000cc; }
       .container .buttons #b1:focus {
         outline: none; }
     .container .buttons #b2 {
@@ -55,12 +73,10 @@ html, body {
       background-color: green;
       padding: 40px;
       border-radius: 50%;
-      border: 3px solid #5e5c5c;
-      margin: 0 25px; }
+      border: 3px solid #2c2c2d;
+      margin: 25px 25px; }
       .container .buttons #b2.hover {
         background-color: #001a00; }
-      .container .buttons #b2:hover {
-        background-color: #004d00; }
       .container .buttons #b2:focus {
         outline: none; }
     .container .buttons #b3 {
@@ -68,12 +84,10 @@ html, body {
       background-color: red;
       padding: 40px;
       border-radius: 50%;
-      border: 3px solid #5e5c5c;
-      margin: 0 25px; }
+      border: 3px solid #2c2c2d;
+      margin: 25px 25px; }
       .container .buttons #b3.hover {
         background-color: #990000; }
-      .container .buttons #b3:hover {
-        background-color: #cc0000; }
       .container .buttons #b3:focus {
         outline: none; }
     .container .buttons #b4 {
@@ -81,11 +95,9 @@ html, body {
       background-color: yellow;
       padding: 40px;
       border-radius: 50%;
-      border: 3px solid #5e5c5c;
-      margin: 0 25px; }
+      border: 3px solid #2c2c2d;
+      margin: 25px 25px; }
       .container .buttons #b4.hover {
         background-color: #999900; }
-      .container .buttons #b4:hover {
-        background-color: #cccc00; }
       .container .buttons #b4:focus {
         outline: none; }
