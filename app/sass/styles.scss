@@ -1,3 +1,6 @@
+html, body {
+    background-color: rgb(59,66,116);
+}
 .container {
     position: absolute;
     margin: 0 auto;
@@ -6,14 +9,56 @@
     left: 50%;
     transform: translate(-50%);
 
+    .header {
+        font-size: 28px;
+        color: white;
+
+        #start-btn {
+            cursor: pointer;
+            padding: 9px 15px;
+            font-size: 18px;
+            background-color: transparent;
+            // border: 2px solid #e3c1a4;
+            border: none;
+            color:  #e3c1a4;
+            transition: .4s ease-in-out;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        #strict-btn {
+            cursor: pointer;
+            padding: 9px 18px;
+            font-size: 18px;
+            background-color: transparent;
+            border: 2px solid #e3c1a4;
+            color:  #e3c1a4;
+            transition: .4s ease-in-out;
+
+            &.on-strict {
+                border: 2px solid rgb(255,50,50);
+                color: rgb(255,50,50);
+                transition: .4s ease-in-out;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
     .buttons {
         margin-top: 50px;
 
         #b1 {
             cursor: pointer;
             background-color: blue;
-            padding: 35px;
+            padding: 40px;
             border-radius: 50%;
+            border: 3px solid rgb(94, 92, 92);
+            margin: 0 25px;
 
             &.hover {
                 background-color: darken(blue, 20%);
@@ -22,13 +67,19 @@
             &:hover {
                 background-color: darken(blue, 10%);
             }
+
+            &:focus {
+                outline: none;
+            }
         }
 
         #b2 {
             cursor: pointer;
             background-color: green;
-            padding: 35px;
+            padding: 40px;
             border-radius: 50%;
+            border: 3px solid rgb(94, 92, 92);
+            margin: 0 25px;
 
             &.hover {
                 background-color: darken(green, 20%);
@@ -37,12 +88,18 @@
             &:hover {
                 background-color: darken(green, 10%);
             }
+            
+            &:focus {
+                outline: none;
+            }
         }
         #b3 {
             cursor: pointer;
             background-color: red;
-            padding: 35px;
+            padding: 40px;
             border-radius: 50%;
+            border: 3px solid rgb(94, 92, 92);
+            margin: 0 25px;          
 
             &.hover {
                 background-color: darken(red, 20%);
@@ -51,18 +108,28 @@
             &:hover {
                 background-color: darken(red, 10%);
             }
+
+            &:focus {
+                outline: none;
+            }
         }
         #b4 {
             cursor: pointer;
             background-color: yellow;
-            padding: 35px;
+            padding: 40px;
             border-radius: 50%;
+            border: 3px solid rgb(94, 92, 92);
+            margin: 0 25px;
 
             &.hover {
                 background-color: darken(yellow, 20%);
             }
             &:hover {
                 background-color: darken(yellow, 10%);
+            }            
+            
+            &:focus {
+                outline: none;
             }
         }
     }

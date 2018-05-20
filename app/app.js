@@ -81,13 +81,19 @@ $(document).ready(function() {
         if (game.player[game.player.length - 1] !== game.currentGame[game.player.length - 1]) {
             game.playerTurn = false;
             if (game.strict) {
+                $('.button').addClass('animated swing');
                 console.log('you lose, start over');
+                setTimeout(() => {
+                    $('.button').removeClass('animated swing');
+                }, 1200);
                 startGame();
             } else {
+                $(`#${id}`).addClass("animated shake");
                 console.log('wrong, try again');
-                setTimeout(() => {
+                setTimeout(function () {
+                    $(`#${id}`).removeClass("animated shake"); 
                     showMoves();
-                }, 1000);
+                }, 1000);     
                 
             }
         } else { // if player makes the correct move
@@ -98,10 +104,8 @@ $(document).ready(function() {
                 setTimeout(() => {
                     addCount();
                     clearPlayer();
-                }, 800);
-                
+                }, 800);    
             }
-            
         }
     }
 
@@ -137,6 +141,7 @@ $(document).ready(function() {
 
     $('#strict-btn').click(() => {
         game.strict = !game.strict;
+        $("#strict-btn").toggleClass("on-strict");
         console.log('strict mode: ' + game.strict);
     })
 
