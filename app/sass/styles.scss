@@ -1,5 +1,5 @@
 html, body {
-    background-color: rgb(59,66,116);
+    background-color: #101f41;
     box-sizing: border-box;
 }
 .container {
@@ -39,8 +39,8 @@ html, body {
 
         #strict-btn {
             cursor: pointer;
-            padding: 9px 18px;
-            font-size: 18px;
+            padding: 7px 16px;
+            font-size: 16px;
             background-color: transparent;
             border: 2px solid #e3c1a4;
             color:  #e3c1a4;
@@ -84,14 +84,20 @@ html, body {
 
         #b1 {
             cursor: pointer;
-            background-color: blue;
+            background-color: transparent;
             padding: 40px;
             border-radius: 50%;
-            border: 3px solid #2c2c2d;
+            border: 3px solid #07ecff;
             margin: 25px 25px;
+            transition: .3s ease-in-out;
+
+            &:hover {
+                border: 3px solid #03767f
+            }
 
             &.hover {
-                background-color: darken(blue, 20%);
+                background-color: #07ecff;
+                transition: .3s ease-in-out;
             }
 
             &:focus {
@@ -101,14 +107,20 @@ html, body {
 
         #b2 {
             cursor: pointer;
-            background-color: green;
+            background-color: transparent;
             padding: 40px;
             border-radius: 50%;
-            border: 3px solid #2c2c2d;
+            border: 3px solid #1bf456;
             margin: 25px 25px;
+            transition: .3s ease-in-out;
+
+            &:hover {
+                border: 3px solid #0d7a2b;
+            }
 
             &.hover {
-                background-color: darken(green, 20%);
+                background-color: #1bf456;
+                transition: .3s ease-in-out;
             }
             
             &:focus {
@@ -117,14 +129,20 @@ html, body {
         }
         #b3 {
             cursor: pointer;
-            background-color: red;
+            background-color: transparent;
             padding: 40px;
             border-radius: 50%;
-            border: 3px solid #2c2c2d;
-            margin: 25px 25px;          
+            border: 3px solid #ff4e4e;
+            margin: 25px 25px; 
+            transition: .3s ease-in-out;         
+
+            &:hover {
+                border: 3px solid #7f2727;
+            }
 
             &.hover {
-                background-color: darken(red, 20%);
+                background-color: #ff4e4e;
+                transition: .3s ease-in-out;
             }
 
             &:focus {
@@ -133,14 +151,20 @@ html, body {
         }
         #b4 {
             cursor: pointer;
-            background-color: yellow;
+            background-color: transparent;
             padding: 40px;
             border-radius: 50%;
-            border: 3px solid #2c2c2d;
+            border: 3px solid #e2f63b;
             margin: 25px 25px;
+            transition: .3s ease-in-out;
+
+            &:hover {
+                border: 3px solid #717b1d;
+            }
 
             &.hover {
-                background-color: darken(yellow, 20%);
+                background-color: #e2f63b;
+                transition: .3s ease-in-out;
             }       
             
             &:focus {

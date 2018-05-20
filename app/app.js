@@ -12,7 +12,13 @@ $(document).ready(function() {
 
     // start the game
     function startGame() {
-        clearGame();
+        // flash all the buttons before game starts
+        for (let id of game.possibilities) {
+            flashButtonLights(id);
+        }
+        setTimeout(() => {
+            clearGame();
+        }, 800);  
     }
 
     // initialize the variables
@@ -66,6 +72,13 @@ $(document).ready(function() {
         }, 300);
     }
 
+    function flashButtonLights(id) {
+        $(`#${id}`).addClass('hover')
+        setTimeout(() => {
+            $(`#${id}`).removeClass('hover');
+        }, 300);
+    }
+
     function clearPlayer() {
         game.player = [];
     }
@@ -89,6 +102,9 @@ $(document).ready(function() {
                 console.log('you lose, start over');
                 setTimeout(() => {
                     $('.button').removeClass('animated swing');
+                    for (let id of game.possibilities) {
+                        flashButtonLights(id);
+                    }
                 }, 1200);
                 $('#reset-btn').css('display', 'inline-block').addClass('animated tada');
                 setTimeout(() => {
@@ -162,6 +178,7 @@ $(document).ready(function() {
         $('#reset-btn').addClass('animated fadeOut');
         setTimeout(() => {
             $('#reset-btn').removeClass('animated fadeOut').css('display', 'none');
+            startGame();
         }, 1000);
     })
 

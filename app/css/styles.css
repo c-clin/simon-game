@@ -1,5 +1,5 @@
 html, body {
-  background-color: #3b4274;
+  background-color: #101f41;
   box-sizing: border-box; }
 
 .container {
@@ -28,8 +28,8 @@ html, body {
         outline: none; }
     .container .header #strict-btn {
       cursor: pointer;
-      padding: 9px 18px;
-      font-size: 18px;
+      padding: 7px 16px;
+      font-size: 16px;
       background-color: transparent;
       border: 2px solid #e3c1a4;
       color: #e3c1a4;
@@ -59,45 +59,61 @@ html, body {
     margin-top: 50px; }
     .container .buttons #b1 {
       cursor: pointer;
-      background-color: blue;
+      background-color: transparent;
       padding: 40px;
       border-radius: 50%;
-      border: 3px solid #2c2c2d;
-      margin: 25px 25px; }
+      border: 3px solid #07ecff;
+      margin: 25px 25px;
+      transition: .3s ease-in-out; }
+      .container .buttons #b1:hover {
+        border: 3px solid #03767f; }
       .container .buttons #b1.hover {
-        background-color: #000099; }
+        background-color: #07ecff;
+        transition: .3s ease-in-out; }
       .container .buttons #b1:focus {
         outline: none; }
     .container .buttons #b2 {
       cursor: pointer;
-      background-color: green;
+      background-color: transparent;
       padding: 40px;
       border-radius: 50%;
-      border: 3px solid #2c2c2d;
-      margin: 25px 25px; }
+      border: 3px solid #1bf456;
+      margin: 25px 25px;
+      transition: .3s ease-in-out; }
+      .container .buttons #b2:hover {
+        border: 3px solid #0d7a2b; }
       .container .buttons #b2.hover {
-        background-color: #001a00; }
+        background-color: #1bf456;
+        transition: .3s ease-in-out; }
       .container .buttons #b2:focus {
         outline: none; }
     .container .buttons #b3 {
       cursor: pointer;
-      background-color: red;
+      background-color: transparent;
       padding: 40px;
       border-radius: 50%;
-      border: 3px solid #2c2c2d;
-      margin: 25px 25px; }
+      border: 3px solid #ff4e4e;
+      margin: 25px 25px;
+      transition: .3s ease-in-out; }
+      .container .buttons #b3:hover {
+        border: 3px solid #7f2727; }
       .container .buttons #b3.hover {
-        background-color: #990000; }
+        background-color: #ff4e4e;
+        transition: .3s ease-in-out; }
       .container .buttons #b3:focus {
         outline: none; }
     .container .buttons #b4 {
       cursor: pointer;
-      background-color: yellow;
+      background-color: transparent;
       padding: 40px;
       border-radius: 50%;
-      border: 3px solid #2c2c2d;
-      margin: 25px 25px; }
+      border: 3px solid #e2f63b;
+      margin: 25px 25px;
+      transition: .3s ease-in-out; }
+      .container .buttons #b4:hover {
+        border: 3px solid #717b1d; }
       .container .buttons #b4.hover {
-        background-color: #999900; }
+        background-color: #e2f63b;
+        transition: .3s ease-in-out; }
       .container .buttons #b4:focus {
         outline: none; }
