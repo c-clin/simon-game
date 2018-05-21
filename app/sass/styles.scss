@@ -1,20 +1,33 @@
 html, body {
     background-color: #101f41;
     box-sizing: border-box;
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 .container {
     position: absolute;
     margin: 0 auto;
     text-align: center;
-    top: 30%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%);
+
+    @media only screen and (max-width: 600px) {
+        top: 5%;
+    }
+    
+    h1 {
+        font-family: 'Pacifico', cursive;
+        font-size: 40px;
+        font-weight: 500;
+        color: #c1bcf9;
+        text-shadow: 1px 2px 2px #101f41;
+    }
 
     .header {
         position: relative;
         font-size: 28px;
         color: white;
+        font-weight: 300;
 
         #start-btn {
             cursor: pointer;
@@ -26,6 +39,14 @@ html, body {
             color: #4ca64c;
             transition: .4s ease-in-out;
             margin: 0 10px;
+            font-weight: 300;
+
+            @media only screen and (max-width: 600px) {
+                display: block;
+                text-align: center;
+                margin: 0 auto;
+                margin-bottom: 10px;
+            }
 
             &.on-start {
                 border: 2px solid #4ca64c;
@@ -49,9 +70,16 @@ html, body {
             padding: 7px 16px;
             font-size: 16px;
             background-color: transparent;
-            border: 2px solid #e3c1a4;
-            color:  #e3c1a4;
+            border: 2px solid transparent;
+            color: #e3c1a4;
             transition: .4s ease-in-out;
+            font-weight: 300;
+
+            @media only screen and (max-width: 600px) {
+                display: block;
+                text-align: center;
+                margin: 0 auto;
+            }
 
             &.on-strict {
                 border: 2px solid rgb(255,50,50);
@@ -75,6 +103,13 @@ html, body {
             border: none;
             color:  #e3c1a4;
             transition: .4s ease-in-out;
+  
+             @media only screen and (max-width: 600px) {
+                text-align: center;
+                margin: 0 auto;
+                left: 0;
+                top: 20px;
+            }           
 
             &:hover {
                 color: greenyellow;

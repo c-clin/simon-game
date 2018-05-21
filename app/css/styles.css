@@ -1,18 +1,29 @@
 html, body {
   background-color: #101f41;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif; }
 
 .container {
   position: absolute;
   margin: 0 auto;
   text-align: center;
-  top: 30%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%); }
+  @media only screen and (max-width: 600px) {
+    .container {
+      top: 5%; } }
+  .container h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    font-weight: 500;
+    color: #c1bcf9;
+    text-shadow: 1px 2px 2px #101f41; }
   .container .header {
     position: relative;
     font-size: 28px;
-    color: white; }
+    color: white;
+    font-weight: 300; }
     .container .header #start-btn {
       cursor: pointer;
       padding: 7px 16px;
@@ -21,7 +32,14 @@ html, body {
       border: 2px solid transparent;
       color: #4ca64c;
       transition: .4s ease-in-out;
-      margin: 0 10px; }
+      margin: 0 10px;
+      font-weight: 300; }
+      @media only screen and (max-width: 600px) {
+        .container .header #start-btn {
+          display: block;
+          text-align: center;
+          margin: 0 auto;
+          margin-bottom: 10px; } }
       .container .header #start-btn.on-start {
         border: 2px solid #4ca64c;
         color: #4ca64c; }
@@ -35,9 +53,15 @@ html, body {
       padding: 7px 16px;
       font-size: 16px;
       background-color: transparent;
-      border: 2px solid #e3c1a4;
-      color: #e3c1a4;
-      transition: .4s ease-in-out; }
+      border: 2px solid transparent;
+      color: #ff3232;
+      transition: .4s ease-in-out;
+      font-weight: 300; }
+      @media only screen and (max-width: 600px) {
+        .container .header #strict-btn {
+          display: block;
+          text-align: center;
+          margin: 0 auto; } }
       .container .header #strict-btn.on-strict {
         border: 2px solid #ff3232;
         color: #ff3232;
@@ -55,6 +79,12 @@ html, body {
       border: none;
       color: #e3c1a4;
       transition: .4s ease-in-out; }
+      @media only screen and (max-width: 600px) {
+        .container .header #reset-btn {
+          text-align: center;
+          margin: 0 auto;
+          left: 0;
+          top: 20px; } }
       .container .header #reset-btn:hover {
         color: greenyellow; }
       .container .header #reset-btn:focus {
