@@ -15,15 +15,19 @@ html, body {
     color: white; }
     .container .header #start-btn {
       cursor: pointer;
-      padding: 9px 15px;
+      padding: 7px 16px;
       font-size: 18px;
       background-color: transparent;
-      border: none;
-      color: #e3c1a4;
+      border: 2px solid transparent;
+      color: #4ca64c;
       transition: .4s ease-in-out;
       margin: 0 10px; }
+      .container .header #start-btn.on-start {
+        border: 2px solid #4ca64c;
+        color: #4ca64c; }
       .container .header #start-btn:hover {
-        color: #ffdb00; }
+        border: 2px solid #4ca64c;
+        color: #4ca64c; }
       .container .header #start-btn:focus {
         outline: none; }
     .container .header #strict-btn {

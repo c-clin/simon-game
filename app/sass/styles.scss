@@ -17,19 +17,25 @@ html, body {
 
         #start-btn {
             cursor: pointer;
-            padding: 9px 15px;
+            padding: 7px 16px;
             font-size: 18px;
             background-color: transparent;
-            // border: 2px solid #e3c1a4;
-            border: none;
-            color:  #e3c1a4;
+            border: 2px solid transparent;
+            // color:  #e3c1a4;
+            color: #4ca64c;
             transition: .4s ease-in-out;
             margin: 0 10px;
 
+            &.on-start {
+                border: 2px solid #4ca64c;
+                color: #4ca64c;
+            }
+
             &:hover {
+                border: 2px solid #4ca64c;
                 // border: 2px solid #e3c1a4;
                 // background-color: rgba(227,193,164, 0.7);
-                color: #ffdb00;
+                color: #4ca64c;
             }
 
             &:focus {

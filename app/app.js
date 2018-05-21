@@ -1,10 +1,9 @@
 $(document).ready(function() {
-
     var game = {
         start: false,
         strict: false,
         count: 0,
-        possibilities: ['b1', 'b2', 'b3', 'b4'],
+        possibilities: ['#b1', '#b2', '#b3', '#b4'],
         currentGame: [],
         player: [],
         playerTurn: false
@@ -59,23 +58,22 @@ $(document).ready(function() {
             }
         }, 600);
         clearPlayer();
-        console.log('before change ' + game.playerTurn);
         game.playerTurn = true;
-        console.log("after change " + game.playerTurn);
     }
 
+    // show effects on ui and add sound
     function playGame(id) {
-        $(`#${id}`).addClass('hover')
+        $(id).addClass('hover')
         playSound(id);
         setTimeout(() => {
-            $(`#${id}`).removeClass('hover');
+            $(id).removeClass('hover');
         }, 300);
     }
 
     function flashButtonLights(id) {
-        $(`#${id}`).addClass('hover')
+        $(id).addClass('hover')
         setTimeout(() => {
-            $(`#${id}`).removeClass('hover');
+            $(id).removeClass('hover');
         }, 300);
     }
 
@@ -84,12 +82,13 @@ $(document).ready(function() {
     }
 
     function playerMoves(id) {
-        console.log('player move ' + game.playerTurn);
-        if (game.playerTurn == true) {
+        console.log("player move " + game.playerTurn);
+        if (game.playerTurn) {
             game.player.push(id);
             checkPlayerMove(id);
+            console.log('player moves: ' + game.player);
         }
-        console.log('player moves: ' + game.player);
+
         
     }
 
@@ -98,10 +97,10 @@ $(document).ready(function() {
         if (game.player[game.player.length - 1] !== game.currentGame[game.player.length - 1]) {
             game.playerTurn = false;
             if (game.strict) {
-                $('.button').addClass('animated swing');
-                console.log('you lose, start over');
+                // player loses
+                $('.button').addClass('animated wobble');
                 setTimeout(() => {
-                    $('.button').removeClass('animated swing');
+                    $('.button').removeClass('animated wobble');
                     for (let id of game.possibilities) {
                         flashButtonLights(id);
                     }
@@ -111,10 +110,10 @@ $(document).ready(function() {
                     $('#reset-btn').removeClass('animated tada');
                 }, 1000);
             } else {
-                $(`#${id}`).addClass("animated shake");
+                $(id).addClass("animated shake");
                 console.log('wrong, try again');
                 setTimeout(function () {
-                    $(`#${id}`).removeClass("animated shake"); 
+                    $(id).removeClass("animated shake"); 
                     showMoves();
                 }, 1000);     
                 
@@ -133,33 +132,39 @@ $(document).ready(function() {
     }
 
     function playSound(id) {
-        var a;
+        let audio;
         switch (id) {
-            case "b1":
-                a = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3");
+            case "#b1":
+                audio = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3");
                 break;
-            case "b2":
-                a = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound2.mp3");
+            case "#b2":
+                audio = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound2.mp3");
                 break;
-            case "b3":
-                a = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound3.mp3");
+            case "#b3":
+                audio = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound3.mp3");
                 break;
-            case "b4":
-                a = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound4.mp3");
+            case "#b4":
+                audio = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound4.mp3");
                 break;
         }
-        a.play();
+        audio.play();
     }
 
     // listens to button clicks
     $('.buttons').click((e) => {
-        playerMoves(e.target.id);
+        if (e.target.id) {
+            playerMoves("#" + e.target.id);
+        }
     })
 
     // start the game on click
     $('#start-btn').click(() => {
+        game.start = true;
         console.log('start game');
+        $('#start-btn').addClass('on-start');
         startGame();
+        
+        // restarts the game in case player clicks start after game ends
         $('#reset-btn').addClass('animated fadeOut');
         setTimeout(() => {
             $('#reset-btn').removeClass('animated fadeOut').css('display', 'none');
@@ -181,12 +186,5 @@ $(document).ready(function() {
             startGame();
         }, 1000);
     })
-
-
-
-
-
-
-
 
 });
