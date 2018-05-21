@@ -7,7 +7,7 @@ html, body {
   position: absolute;
   margin: 0 auto;
   text-align: center;
-  top: 20%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%); }
   @media only screen and (max-width: 600px) {
@@ -15,24 +15,30 @@ html, body {
       top: 5%; } }
   .container h1 {
     font-family: 'Pacifico', cursive;
-    font-size: 40px;
+    font-size: 55px;
     font-weight: 500;
     color: #c1bcf9;
     text-shadow: 1px 2px 2px #101f41; }
+    @media only screen and (max-width: 600px) {
+      .container h1 {
+        font-size: 40px; } }
   .container .header {
     position: relative;
     font-size: 28px;
     color: white;
     font-weight: 300; }
+    .container .header #count {
+      display: inline-block;
+      margin-right: 10px; }
     .container .header #start-btn {
       cursor: pointer;
       padding: 7px 16px;
       font-size: 18px;
       background-color: transparent;
       border: 2px solid transparent;
-      color: #4ca64c;
+      color: #e3c1a4;
       transition: .4s ease-in-out;
-      margin: 0 10px;
+      margin: 0 5px;
       font-weight: 300; }
       @media only screen and (max-width: 600px) {
         .container .header #start-btn {
@@ -51,10 +57,10 @@ html, body {
     .container .header #strict-btn {
       cursor: pointer;
       padding: 7px 16px;
-      font-size: 16px;
+      font-size: 18px;
       background-color: transparent;
       border: 2px solid transparent;
-      color: #ff3232;
+      color: #e3c1a4;
       transition: .4s ease-in-out;
       font-weight: 300; }
       @media only screen and (max-width: 600px) {
@@ -66,6 +72,9 @@ html, body {
         border: 2px solid #ff3232;
         color: #ff3232;
         transition: .4s ease-in-out; }
+      .container .header #strict-btn:hover {
+        border: 2px solid #ff3232;
+        color: #ff3232; }
       .container .header #strict-btn:focus {
         outline: none; }
     .container .header #reset-btn {

@@ -7,7 +7,7 @@ $(document).ready(function() {
         currentGame: [],
         player: [],
         playerTurn: false
-    }
+    };
 
     // start the game
     function startGame() {
@@ -41,9 +41,7 @@ $(document).ready(function() {
     // randomly selects a id from the possibilities array
     function newMove() {
         game.currentGame.push(game.possibilities[Math.floor(Math.random()*4)]);
-        console.log('current game: ' + game.currentGame);
         showMoves();
-        game.playerTurn = true;
     }
 
     // show the next move on the UI
@@ -82,14 +80,10 @@ $(document).ready(function() {
     }
 
     function playerMoves(id) {
-        console.log("player move " + game.playerTurn);
         if (game.playerTurn) {
             game.player.push(id);
             checkPlayerMove(id);
-            console.log('player moves: ' + game.player);
         }
-
-        
     }
 
     function checkPlayerMove(id) {
@@ -111,7 +105,7 @@ $(document).ready(function() {
                 }, 1000);
             } else {
                 $(id).addClass("animated shake");
-                console.log('wrong, try again');
+                console.log('wrong');
                 setTimeout(function () {
                     $(id).removeClass("animated shake"); 
                     showMoves();
@@ -152,8 +146,10 @@ $(document).ready(function() {
 
     // listens to button clicks
     $('.buttons').click((e) => {
-        if (e.target.id) {
-            playerMoves("#" + e.target.id);
+        if (game.playerTurn) {
+            if (e.target.id) {
+                playerMoves("#" + e.target.id);
+            }
         }
     })
 
@@ -186,5 +182,4 @@ $(document).ready(function() {
             startGame();
         }, 1000);
     })
-
 });
